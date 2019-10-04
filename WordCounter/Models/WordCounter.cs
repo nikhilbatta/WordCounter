@@ -7,7 +7,7 @@ namespace WordCounter
     {
         // public static List<string> AuthorList = new List<string>();  
         
-        public static int userInputToStringArray(string whatitshouldbe, string userInput)
+        public static int userStringToCounter(string whatitshouldbe, string userInput)
         {
             string [] stringList = userInput.ToLower().Split(" ");
             int counter = 0;
