@@ -21,8 +21,8 @@ namespace WordCounter.Tests
         public void userStringToCounter_1Match_1()
         {
             // Arrange 
-            string word = "dog";
-            string sentence = "I am a dog";
+            string word = "bread";
+            string sentence = "I like bread";
             int count = 1;
             // Act 
             int result = RepeatCounter.userStringToCounter(word,sentence);
@@ -73,7 +73,7 @@ namespace WordCounter.Tests
             // Arrange 
             string word = "fire";
             string sentence = "I am on f!re";
-            int count = 0;
+           int count = 0;
             // Act 
             int result = RepeatCounter.userStringToCounter(word,sentence);
             // Assert

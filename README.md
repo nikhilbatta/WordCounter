@@ -21,7 +21,7 @@ _Specs_
     <dd>Don't check for partial matches<dd>
     </dl>
     <dl>
-  <dt>If user enters more than one word to compare then will throw a message and prompt to re-enter</dt>
+  <dt>If user enters more than one word to compare then will prompt to re-enter</dt>
     <dd>Input = "fire play". "I'm a firefighter" </dd>
     <dd>Output = " only enter in one word, not multiple" </dd>
     <dd>To see if the user has entered in multiple words<dd>
@@ -33,8 +33,8 @@ _Specs_
     </dl>
     <dl>
     <dt>If user enters in any punctiuation</dt>
-    <dd>Input = "D$g". "I'm a Dog" </dd>
-    <dd>Output = "Please dont enter in any special characters </dd>
+    <dd>Input = "fir!e". "I'm on fire" </dd>
+    <dd>Output = 0 matches </dd>
     <dd>To catch errors for punctiuation</dd>
     </dl>
 
