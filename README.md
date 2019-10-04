@@ -42,7 +42,7 @@ _Specs_
 
 ## Setup/Installation Requirements
 
-* _Git Clone_
+* _Git Clone from https://github.com/nikhilbatta/WordCounter_
 * _Make sure you have .Net installed_
 * _type in dotnet run in terminal_
 
