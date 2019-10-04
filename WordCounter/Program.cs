@@ -8,7 +8,10 @@ namespace WordCounter
         public static void Main()
         {
             Calculation.userInputToList("I am a dog");
-            
+            foreach(string item in Calculation.AuthorList)
+            {
+                Console.WriteLine(item);
+            }
             
         }
     }

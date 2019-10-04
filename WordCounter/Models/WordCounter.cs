@@ -10,7 +10,10 @@ namespace WordCounter
         public static void userInputToList(string userInput)
         {
             string [] userinputostring = userInput.Split(" ");
-           
+            foreach(string ok in userinputostring)
+            {
+                AuthorList.Add(ok);
+            }
            
         }
     }
