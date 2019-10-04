@@ -15,5 +15,13 @@ namespace WordCounter.Tests
         {
             Assert.AreEqual(Calculation.userInputToStringArray("dog","I am a dog"),1);
         }
+
+        [TestMethod]
+        public void userInputToStringArray_1Matchlowercase()
+        {
+            Assert.AreEqual(Calculation.userInputToStringArray("dog","I am a Dog"),1);
+        }
+        
+
     }
 }
