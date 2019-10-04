@@ -6,21 +6,68 @@ namespace WordCounter.Tests
     public class WordCounterTests
     {
         [TestMethod]
-        public void userInputToStringArray_0Matches()
+        public void userStringToCounter_0Matches_0()
         {
-             Assert.AreEqual(Calculation.userInputToStringArray("dog","I am a cat"),0);
+            // arrange 
+            string word = "dog";
+            string sentence = "I am a cat";
+            int count = 0;
+            // Act
+            int result = Calculation.userStringToCounter(word,sentence);
+            // Assert
+             Assert.AreEqual(count,result);
         }
         [TestMethod]
-        public void userInputToStringArray_1Match()
+        public void userStringToCounter_1Match_1()
         {
-            Assert.AreEqual(Calculation.userInputToStringArray("dog","I am a dog"),1);
+            // Arrange 
+            string word = "dog";
+            string sentence = "I am a dog";
+            int count = 1;
+            // Act 
+            int result = Calculation.userStringToCounter(word,sentence);
+            // Assert
+            Assert.AreEqual(count,result);
         }
 
         [TestMethod]
-        public void userInputToStringArray_1Matchlowercase()
+        public void userStringToCounter_1Matchlowercase_1()
         {
-            Assert.AreEqual(Calculation.userInputToStringArray("dog","I am a Dog"),1);
+            // Arrange 
+            string word = "dog";
+            string sentence = "I am a Dog";
+            int count = 1;
+            // Act 
+            int result = Calculation.userStringToCounter(word,sentence);
+            // Asssert
+
+            Assert.AreEqual(count ,result);
         }
+        [TestMethod]
+        public void userStringToCounter_noMatchForPartialWords_0()
+        {
+            //Arrange
+             string word = "fire";
+             string sentence = "I am a firefighter";
+             int count = 0;
+             // Act
+             int result = Calculation.userStringToCounter(word,sentence);
+             // Assert
+            Assert.AreEqual(count,result);
+        }
+         [TestMethod]
+        public void userStringToCounter_CheckForPunctiuationInWord_0()
+        {
+            //Arrange
+            string word = "fi!re";
+            string sentence = "I am on fire";
+            int count = 0;
+            // Act
+            int result = Calculation.userStringToCounter(word,sentence);
+            // Assert
+            Assert.AreEqual(count,result);
+        }
+
         
 
     }

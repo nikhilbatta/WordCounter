@@ -12,24 +12,30 @@ _Specs_
   <dt>Takes a single word to check for in the sentence</dt>
     <dd>Input = "bread". "I like bread" </dd>
     <dd>Output = 1 </dd>
-    <dd>I chose bread because its a short sized word not too short, not too long of a word.<dd>
+    <dd>Checking for matches of the word. Most simple behavior.<dd>
     </dl>
 <dl>
   <dt>Takes a single word and will only return if its the full word not parts of it</dt>
     <dd>Input = "fire". "I'm a firefighter" </dd>
     <dd>Output = 0 </dd>
-    <dd>I chose fire because fire is inside of firefighter but I only want to grab a count if its the full word.<dd>
+    <dd>Don't check for partial matches<dd>
     </dl>
     <dl>
   <dt>If user enters more than one word to compare then will throw a message and prompt to re-enter</dt>
     <dd>Input = "fire play". "I'm a firefighter" </dd>
     <dd>Output = " only enter in one word, not multiple" </dd>
-    <dd>I chose the words fire and play to test and see if the user has entered in multiple words.<dd>
+    <dd>To see if the user has entered in multiple words<dd>
     </dl>
     <dl>
     <dt>If user enters in a word with lowercase and uppercase letters program will toLowerCase</dt>
     <dd>Input = "DOg". "I'm a Dog" </dd>
     <dd>Output = 1; </dd>
+    </dl>
+    <dl>
+    <dt>If user enters in any punctiuation</dt>
+    <dd>Input = "D$g". "I'm a Dog" </dd>
+    <dd>Output = "Please dont enter in any special characters </dd>
+    <dd>To catch errors for punctiuation</dd>
     </dl>
 
 
