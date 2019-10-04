@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace WordCounter
 {
-    public class Calculation
+    public class RepeatCounter
     {
        
         public static string GrabWord()
         {
-            Console.WriteLine("Please enter in a word that you would like to find in the sentence r ");
+            Console.WriteLine("Please enter in a word that you would like to find in the sentence");
             string userFirstAnswer = Console.ReadLine();
             bool isError = false;
             char[] errorChecker = userFirstAnswer.ToCharArray();

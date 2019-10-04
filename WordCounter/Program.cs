@@ -7,11 +7,17 @@ namespace WordCounter
     {
         public static void Main()
         {
-            
-            string word = Calculation.GrabWord(); 
-            string sentence = Calculation.GrabSentence(); 
-            int counter = Calculation.userStringToCounter(word,sentence);
-            Console.WriteLine(counter);
+            string word = RepeatCounter.GrabWord(); 
+            string sentence = RepeatCounter.GrabSentence(); 
+            int counter = RepeatCounter.userStringToCounter(word,sentence);
+            if(counter > 0)
+            {
+                Console.WriteLine("Your word appeared this many times:" + counter);
+            }
+            else
+            {
+                Console.WriteLine("Couldn't find your word")
+            }
         }
         
     }
