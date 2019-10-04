@@ -1,6 +1,6 @@
-# _Bakery_
+# _WordCounter_
 
-#### _This program will allow you to order bread and pastries through the console and then you have the option to add to your order or stop shopping. September 27,2019_
+#### _This program will allow a user to enter in a word to find, and a sentence which the program will find how many times the word appears in the sentence. September 27,2019_
 
 #### By _Nikhil Batta_
 
