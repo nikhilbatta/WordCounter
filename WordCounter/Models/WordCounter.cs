@@ -7,13 +7,13 @@ namespace WordCounter
     {
         // public static List<string> AuthorList = new List<string>();  
         
-        public static int userStringToCounter(string whatitshouldbe, string userInput)
+        public static int userStringToCounter(string whatitshouldbe, string userInputSentence)
         {
-            string [] stringList = userInput.ToLower().Split(" ");
+            string [] stringList = userInputSentence.ToLower().Split(" ");
             int counter = 0;
-            foreach(string ok in stringList)
+            foreach(string singleword in stringList)
             {
-                if (ok == whatitshouldbe)
+                if (singleword == whatitshouldbe)
                 {
                     counter++;
                 }
