@@ -14,11 +14,12 @@ namespace WordCounter
             {
                 if(Char.IsPunctuation(error))
                 {
-                    string errormessage = "please enter in something valid";
-                    GrabWord();
-                    return errormessage;
+                    
+                    return GrabWord();
+                    
                 }
             }
+            Console.WriteLine(userFirstAnswer);
             return GrabSentence(userFirstAnswer);
         }
         public static int GrabSentence(string userFirstAnswer)
@@ -27,14 +28,15 @@ namespace WordCounter
             Console.WriteLine("please enter in a sentence");
             string userSecondAnswer = Console.ReadLine();
             char[] secondAnswerErrorChecker = userSecondAnswer.ToCharArray();
-            foreach(char error in secondAnswerErrorChecker)
+            foreach(char error1 in secondAnswerErrorChecker)
             {
-                if(Char.IsPunctuation(error))
+                if(Char.IsPunctuation(error1))
                 {
                     Console.WriteLine("please enter in a valid sentence");
                     GrabSentence(userFirstAnswer);
                 }
             }
+            Console.WriteLine(userFirstAnswer);
             int counter = Calculation.userStringToCounter(userFirstAnswer,userSecondAnswer);
             return counter;
 
@@ -49,7 +51,8 @@ namespace WordCounter
                 {
                     counter++;
                 }
-            }  
+            }
+            Console.WriteLine(counter);  
            return counter;
         }
         
