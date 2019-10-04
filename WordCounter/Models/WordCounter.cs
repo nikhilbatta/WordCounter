@@ -5,14 +5,19 @@ namespace WordCounter
 {
     public class Calculation
     {
-        public static List<string> AuthorList = new List<string>();  
+        // public static List<string> AuthorList = new List<string>();  
         
         public static void userInputToList(string userInput)
         {
-            string [] userinputostring = userInput.Split(" ");
-            foreach(string ok in userinputostring)
+            string [] stringList = userInput.Split(" ");
+            foreach(string ok in stringList)
             {
-                AuthorList.Add(ok);
+                int counter = 0;
+                if (ok == "dog")
+                {
+                    counter++;
+                    Console.WriteLine(counter);
+                }
             }
            
         }
