@@ -7,19 +7,24 @@ namespace WordCounter
     {
         // public static List<string> AuthorList = new List<string>();  
         
-        public static void userInputToList(string userInput)
+        public static void userInputToStringArray(string whatitshouldbe, string userInput)
         {
             string [] stringList = userInput.Split(" ");
+            stringArrayCounter(stringList)
+           
+        }
+        public static int stringArrayCounter(string[] stringList)
+        {
+             int counter = 0;
             foreach(string ok in stringList)
             {
-                int counter = 0;
-                if (ok == "dog")
+                
+                if (ok == whatitshouldbe)
                 {
                     counter++;
-                    Console.WriteLine(counter);
                 }
             }
-           
+                Console.WriteLine(counter);
         }
     }
 }
