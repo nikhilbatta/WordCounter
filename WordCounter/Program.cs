@@ -7,7 +7,7 @@ namespace WordCounter
     {
         public static void Main()
         {
-            Calculation.userInputToList("dog", "I am a dog doghead dog");
+            // Calculation.userInputToList("dog", "I am a dog doghead dog");
             // foreach(string item in Calculation.AuthorList)
             // {
             //     Console.WriteLine(item);
