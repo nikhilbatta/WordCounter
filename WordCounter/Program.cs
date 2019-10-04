@@ -7,7 +7,11 @@ namespace WordCounter
     {
         public static void Main()
         {
-            Console.WriteLine(Calculation.GrabWord());
+            
+            string word = Calculation.GrabWord(); 
+            string sentence = Calculation.GrabSentence(); 
+            int counter = Calculation.userStringToCounter(word,sentence);
+            Console.WriteLine(counter);
         }
         
     }

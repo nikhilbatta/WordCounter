@@ -5,41 +5,50 @@ namespace WordCounter
 {
     public class Calculation
     {
-        public static dynamic GrabWord()
+       
+        public static string GrabWord()
         {
-            Console.WriteLine("Please enter in a word that you would like to find in the sentence ");
+            Console.WriteLine("Please enter in a word that you would like to find in the sentence r ");
             string userFirstAnswer = Console.ReadLine();
+            bool isError = false;
             char[] errorChecker = userFirstAnswer.ToCharArray();
             foreach(char error in errorChecker)
             {
                 if(Char.IsPunctuation(error))
                 {
-                    
-                    return GrabWord();
-                    
+                   isError = true;
                 }
             }
-            Console.WriteLine(userFirstAnswer);
-            return GrabSentence(userFirstAnswer);
+            if(isError)
+            {
+                return GrabWord();
+            }
+            else
+            {
+                  return userFirstAnswer;
+            }
         }
-        public static int GrabSentence(string userFirstAnswer)
+        public static string GrabSentence()
         {
-            
             Console.WriteLine("please enter in a sentence");
             string userSecondAnswer = Console.ReadLine();
+            bool isError = false;
             char[] secondAnswerErrorChecker = userSecondAnswer.ToCharArray();
             foreach(char error1 in secondAnswerErrorChecker)
             {
                 if(Char.IsPunctuation(error1))
                 {
-                    Console.WriteLine("please enter in a valid sentence");
-                    GrabSentence(userFirstAnswer);
+                    isError =true;
                 }
             }
-            Console.WriteLine(userFirstAnswer);
-            int counter = Calculation.userStringToCounter(userFirstAnswer,userSecondAnswer);
-            return counter;
-
+            if(isError)
+            {
+                return GrabSentence();
+            }
+            else
+            {
+                return userSecondAnswer;
+            }
         }
           public static int userStringToCounter(string whatitshouldbe, string userInputSentence)
         {
@@ -52,10 +61,7 @@ namespace WordCounter
                     counter++;
                 }
             }
-            Console.WriteLine(counter);  
            return counter;
         }
-        
-        
     }
 }
